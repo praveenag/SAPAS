@@ -1,6 +1,8 @@
+require_relative 'properties'
+
 class ParseMingleInfo
-  def initialize(csv_name)
-    f = File.new(csv_name)
+  def initialize
+    f = File.new(Properties.new.csv_file)
     process(f.readlines)
   end
 
@@ -28,6 +30,6 @@ class ParseMingleInfo
   end
 end
 
-p = ParseMingleInfo.new('/home/praveeg/Downloads/new1.txt')
+p = ParseMingleInfo.new
 puts p.type("596")
 puts p.title("596")
