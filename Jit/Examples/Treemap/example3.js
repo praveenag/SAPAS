@@ -28,30 +28,7 @@ var Log = {
 
 function init(){
   //init data
-  var json = {
-        "children": [
-           {
-             "data": {
-               "artist": "A Perfect Circle", 
-               "playcount": "10", 
-               "$color": "#8E7032", 
-               "$area": 10
-             }, 
-             "id": "album-Thirteenth Step", 
-             "name": "Thirteenth Step"
-           }, 
-           {
-             "data": {
-               "artist": "A Perfect Circle", 
-               "playcount": "35", 
-               "$color": "#906E32", 
-               "$area": 35
-             }, 
-             "id": "album-Mer De Noms", 
-             "name": "Mer De Noms"
-           }
-         ]
-  };
+  var json = {"children":[{"data":{"File name":"app/models/label.rb","playcount":167,"$color":"#FF1111","$area":167},"id":"app/models/label.rb","name":"app/models/label.rb"},{"data":{"File name":"app/controllers/labels_controller.rb","playcount":137,"$color":"#FF2222","$area":137},"id":"app/controllers/labels_controller.rb","name":"app/controllers/labels_controller.rb"},{"data":{"File name":"app/assets/stylesheets/base.css.erb","playcount":133,"$color":"#FF3333","$area":133},"id":"app/assets/stylesheets/base.css.erb","name":"app/assets/stylesheets/base.css.erb"},{"data":{"File name":"app/views/labels/new.html.erb","playcount":110,"$color":"#FF4444","$area":110},"id":"app/views/labels/new.html.erb","name":"app/views/labels/new.html.erb"},{"data":{"File name":"app/models/user.rb","playcount":108,"$color":"#FF5555","$area":108},"id":"app/models/user.rb","name":"app/models/user.rb"},{"data":{"File name":"app/helpers/labels_helper.rb","playcount":99,"$color":"#FF6666","$area":99},"id":"app/helpers/labels_helper.rb","name":"app/helpers/labels_helper.rb"},{"data":{"File name":"app/views/labels/show.html.erb","playcount":88,"$color":"#FF7777","$area":88},"id":"app/views/labels/show.html.erb","name":"app/views/labels/show.html.erb"},{"data":{"File name":"app/views/layouts/application.html.erb","playcount":76,"$color":"#FF8888","$area":76},"id":"app/views/layouts/application.html.erb","name":"app/views/layouts/application.html.erb"},{"data":{"File name":"app/helpers/application_helper.rb","playcount":76,"$color":"#FF9999","$area":76},"id":"app/helpers/application_helper.rb","name":"app/helpers/application_helper.rb"},{"data":{"File name":"app/controllers/application_controller.rb","playcount":67,"$color":"#FF10101010","$area":67},"id":"app/controllers/application_controller.rb","name":"app/controllers/application_controller.rb"}]};
   //end
   //init TreeMap
   var tm = new $jit.TM.Squarified({
