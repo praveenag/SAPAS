@@ -1,5 +1,5 @@
 class Properties
   def csv_file
-    '/home/praveeg/Downloads/new1.txt'
+     '/Users/ashok/projects/SAPAS/bluelabel.txt'
   end
 end
