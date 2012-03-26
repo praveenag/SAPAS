@@ -1,10 +1,10 @@
 require 'json'
-require '/Users/ashok/projects/SAPAS/git_analyzer.rb'
+require '/Users/ashok/projects/SAPAS/git_parser.rb'
 
 class BugVisualizer
 	def top_culprits
 		files_map = GitParser.files_map
-    files_map.sort_by{|file,file_info| file_info.bug_count}[-10..-1].reverse
+    	files_map.sort_by{|file,file_info| file_info.bug_count}[-20..-1].reverse
 	end
 
 	def commit_count
