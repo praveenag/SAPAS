@@ -18,7 +18,8 @@ class GitParser
   end
 
   def self.commit_chunks
-    raw_commits = `./get_commits.sh`
+    project_directory = YAML.load_file('properties.yml')['project_directory']
+    raw_commits = `git --git-dir #{project_directory}/.git log --format='&&&&&%h^^^%ci^^^%s%######' --name-only`
 		commit_chunks = raw_commits.split('&&&&&')
 		commit_chunks[1..-1]
   end
