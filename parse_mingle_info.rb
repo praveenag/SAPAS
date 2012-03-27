@@ -30,7 +30,3 @@ class ParseMingleInfo
     data[value]
   end
 end
-
-p = ParseMingleInfo.new
-puts p.type("596")
-puts p.title("596")

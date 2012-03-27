@@ -18,7 +18,7 @@ class GitParser
   end
 
   def self.commit_chunks
-		raw_commits =  `  git log --format='&&&&&%h^^^%ci^^^%s%######' --name-only`
+    raw_commits = `./get_commits.sh`
 		commit_chunks = raw_commits.split('&&&&&')
 		commit_chunks[1..-1]
   end

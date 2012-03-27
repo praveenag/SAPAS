@@ -4,7 +4,7 @@ require_relative 'git_parser'
 class BugVisualizer
 	def top_culprits
 		files_map = GitParser.files_map
-    	files_map.sort_by{|file,file_info| file_info.bug_count}[-20..-1].reverse
+    files_map.sort_by{|file,file_info| file_info.bug_count}[-20..-1].reverse
 	end
 
 	def commit_count
