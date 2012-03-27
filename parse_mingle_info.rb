@@ -1,8 +1,9 @@
-require_relative 'properties'
+require 'yaml'
 
 class ParseMingleInfo
   def initialize
-    f = File.new(Properties.new.csv_file)
+    properties = YAML.load_file('properties.yml')
+    f = File.new(properties["csv_file_path"])
     process(f.readlines)
   end
 

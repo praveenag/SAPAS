@@ -1,14 +1,14 @@
 require 'rubygems'
 require 'json'
-require '/Users/ashok/projects/SAPAS/parse_mingle_info.rb'
+require_relative 'parse_mingle_info'
 
 class GitParser
 
   def self.files_map
   	files_mapping = {}
-		commit_chunks.each do |chunk|  
+		commit_chunks.each do |chunk|
 		  commit_metadata, raw_all_files = chunk.split('######')
-		  raw_all_files.split.select{|file| file.include?('app/')}.each do |file| 
+		  raw_all_files.split.select{|file| file.include?('app/')}.each do |file|
 		  	file_info = files_mapping[file] || FileInfo.new(file)
 		  	file_info.raw_commit = commit_metadata
 		  	files_mapping[file] = file_info
@@ -18,13 +18,13 @@ class GitParser
   end
 
   def self.commit_chunks
-		raw_commits =  `  git log --format='&&&&&%h^^^%ci^^^%s%######' --name-only`		
+		raw_commits =  `  git log --format='&&&&&%h^^^%ci^^^%s%######' --name-only`
 		commit_chunks = raw_commits.split('&&&&&')
 		commit_chunks[1..-1]
   end
 end
 
-class FileInfo	
+class FileInfo
   attr_accessor :file_name, :raw_commits, :bug_count, :change_count, :card_numbers
   @@mingle_info = ParseMingleInfo.new
 
